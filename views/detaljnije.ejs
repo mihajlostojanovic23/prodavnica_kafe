@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <link href="..//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="..//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="..//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="../css/login.css">
+  </head>
+  <body>
+
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown" >
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <br>
+    
+
+ 
+    <div class="row">
+        <% detaljnije.forEach (function(detalji) {%>
+        <div class="col-md-6 col-lg-4 menu-wrap">
+        
+            <img src="/images/<%= detalji.slika %>" width="80%" height="40%">
+          <div class="text">
+              <div class="d-flex">
+                <div class="one-half">
+                  <h3><%= detalji.ime %> </h3>
+                  <p><%= detalji.opis %> </p>
+                </div>
+                <div class="one-forth">
+                  <h3><%= detalji.cena %>rsd</h3>
+                </div> 
+                <div id="formFooter" style="background-color: rgba(0, 0, 0, 0.171);">
+                  <a style="color: black;" class="" href="/meni">Vrati se nazad</a> 
+                  </div>
+              </div>
+              </div>
+              </div>
+              <% }) %> 
+              </div>
+              </div>
+              </div>
+              
+
+             
+    
+  </body>
+</html>

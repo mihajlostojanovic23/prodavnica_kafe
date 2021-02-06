@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head"); %> 
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container"  >
+	      <a class="navbar-brand"  href="/">LaLa kafeterija</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse " id="ftco-nav" style="background-color:white;">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="/" class="nav-link"><b style="color:black">Početak</b></a></li>
+	        	<li class="nav-item"><a href="meni" class="nav-link"><b style="color:black">Meni</b></a></li>
+				<li class="nav-item"><a href="/ostavi_utisak" class="nav-link"><b style="color:black">Utisak</b></a></li>
+	        	<li class="nav-item"><a href="/blog" class="nav-link"><b style="color:black">Događaji</b></a></li>
+            <li class="nav-item"><a href="/kontakt" class="nav-link"><b style="color:black">Kontakt</b></a></li>
+          </ul>
+          <div class="dropdown" style="margin: 0; width: 50px;">
+            <button class="btn" style="color: rgb(0, 0, 0);"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+             <b> Ostalo </b>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" style="background-color:white;" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item " href="login">Prijavi se</a></li>
+              <li><a class="dropdown-item" href="logout">Odjavi se</a></li>
+              
+            </ul>
+            </div>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <br> <br> <br> <br>
+    <div class="col-lg-12" style="text-align: center;">
+      <% if (locals.email==="mihajlomixi@live.co.uk") {
+         %> 
+       <button class="btn btn-secondary" style="border-radius: 40px;">  
+         <a href="utisci" style="color: white;"> Pregledaj sve utiske! </a></button>
+     <% } %> 
+      </div>
+      <br>  
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row d-flex">
+          <div class="col-md-5 ftco-animate img img-2" style="background-image: url(images/coffe-worker.jpg);"></div>
+          <div class="col-md-7 ftco-animate makereservation p-4 p-md-5">
+          	<div class="heading-section ftco-animate mb-5">
+	         <p class="subheading">Forma utisaka</p>
+	            <h2 class="mb-4">Istaknite Vaš utisak!</h2>
+	          </div>
+            <form action="/ostavi_utisak" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Ime</label>
+                    <input id="utisak-name" name="ime" type="text" class="form-control" placeholder="Vaše ime" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Email</label>
+                    <input id="utisak-email" name="email" type="text" class="form-control" placeholder="Vaš email" required>
+                  </div>
+                </div>
+               <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="">Utisak</label>
+                    <textarea id="utisak-opis" name="utisak"  rows="8" class="form-control" placeholder="Ostavite nam Vaše utiske!" required></textarea>
+                  </div>
+                </div>
+                              
+                
+                
+                <div class="col-md-12 mt-3">
+                  <div id="btn-utisak-container" class="form-group">
+                    <input id="btn-utisak" type="submit" value="Pošalji" class="btn btn-primary py-3 px-5">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+			</div>
+		</section>
+
+    <%- include("partials/footer"); %>
+    <%- include("partials/skripte"); %>
+ 
+ <!--<script>
+  (function(){
+    console.log('Hello!')
+    $('#btn-utisak').click(function(event){
+      if (event)
+      event.preventDefault()
+
+      var utisak = {
+        name: $('#utisak-name').val(),
+        email: $('#utisak-email').val(),
+        utisak: $('#utisak-opis').val()
+      }
+      console.log('Unesi utisak' + JSON.stringify(utisak))
+      $.ajax({
+        url:'/utisak',
+        method: 'post',
+        data: utisak,
+        success: function(resp){
+        console.log('Utisak je primljen: ' + JSON.stringify(resp))
+        $('#btn-utisak-container').html('<h3>Hvala Vam! Uspesno ste nam poslali poruku!</h3>')
+        },
+        error: function(resp){
+        
+        }
+      })
+
+    })
+  })()
+  </script> -->
+  </body>
+</html>

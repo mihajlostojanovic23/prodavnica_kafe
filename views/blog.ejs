@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head.ejs"); %> 
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="background-image: url('../images/dogadjaj.jpg');">
+	    <div class="container" >
+	      <a class="navbar-brand"  href="/"> Lala kafeterija</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse " id="ftco-nav" >
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="/" class="nav-link"><b style="color:black">Početak</b></a></li>
+	        	<li class="nav-item"><a href="meni" class="nav-link"><b style="color:black">Meni</b></a></li>
+				<li class="nav-item"><a href="/ostavi_utisak" class="nav-link"><b style="color:black">Utisak</b></a></li>
+	        	<li class="nav-item"><a href="/blog" class="nav-link"><b style="color:black">Događaji</b></a></li>
+            <li class="nav-item"><a href="/kontakt" class="nav-link"><b style="color:black">Kontakt</b></a></li>
+          </ul>
+          <div class="dropdown" style="margin: 0; width: 50px;">
+            <button class="btn" style="color: rgb(0, 0, 0);"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+             <b> Ostalo </b>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" style="background-color:white;" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item " href="login">Prijavi se</a></li>
+              <li><a class="dropdown-item" href="logout">Odjavi se</a></li>
+              
+            </ul>
+            </div>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/dogadjaj.jpg');" data-stellar-background-ratio="0.9">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Događaji</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Početak <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+		<section class="ftco-section bg-light">
+			<div class="container">
+				<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/quiz.jpeg');">
+              </a>
+              <div class="text px-4 pt-3 pb-4">
+                <div class="meta">
+                  <div><a href="#">Dec 30, 2020</a></div>
+                  <div><a href="#">Admin</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Održana je prva kviskoteka u našoj kafeteriji!</a></h3>
+                <p class="clearfix">
+                  <a href="#" class="float-left read">Pročitaj više</a>
+                  <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </a>
+              <div class="text px-4 pt-3 pb-4">
+                <div class="meta">
+                  <div><a href="#">Dec 29, 2020</a></div>
+                  <div><a href="#">Admin</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Danas nas je posetio gradonačelnik Niša!</a></h3>
+                <p class="clearfix">
+                  <a href="#" class="float-left read">Pročitaj više</a>
+                  <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </a>
+              <div class="text px-4 pt-3 pb-4">
+                <div class="meta">
+                  <div><a href="#">Dec 22, 2020</a></div>
+                  <div><a href="#">Admin</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Dobro jutro svete! Stigla je napokon zima, a zajedno sa njom i njena idila!</a></h3>
+                <p class="clearfix">
+                  <a href="#" class="float-left read">Pročitaj više</a>
+                  <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+              </a>
+              <div class="text px-4 pt-3 pb-4">
+                <div class="meta">
+                  <div><a href="#">Dec 20, 2020</a></div>
+                  <div><a href="#">Admin</a></div>
+                </div>
+                <h3 class="heading"><a href="#">LaLaLa, kafeteriji je rođendan! Dođite večeras i zajedno sa nama proslavite naš prvi rođendan! </a></h3>
+                <p class="clearfix">
+                  <a href="#" class="float-left read">Pročitaj više</a>
+                  <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/covid.jpg');">
+              </a>
+              <div class="text px-4 pt-3 pb-4">
+                <div class="meta">
+                  <div><a href="#">Dec 15, 2020</a></div>
+                  <div><a href="#">Admin</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Obaveštenje o novostalaj situaciji!</a></h3>
+                <p class="clearfix">
+                  <a href="#" class="float-left read">Pročitaj više</a>
+                  <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/distanca.jpg');">
+              </a>
+              <div class="text px-4 pt-3 pb-4">
+                <div class="meta">
+                  <div><a href="#">Feb 4, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                </div>
+                <h3 class="heading"><a href="#">Distanciraj se i smanji rizik!</a></h3>
+                <p class="clearfix">
+                  <a href="#" class="float-left read">Pročitaj više</a>
+                  <a href="#" class="float-right meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters my-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+    
+
+    <%- include ('partials/skripte') %>
+  </body>
+</html>

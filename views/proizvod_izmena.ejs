@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/login.css">
+  </head>
+  <body>
+
+
+<link href="..//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="..//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="..//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <br>
+    
+
+    <div class="conatiner">
+      <% proizvodi.forEach (function(proizvod) {%>
+    <form action="/update/<%= proizvod.id %>" method="POST">
+    <input class="mb-3" type="file" name="slika" value="<%= proizvod.slika %>" id="slika">
+    <input class="mb-3" type="text" id="ime" name="ime" value="<%= proizvod.ime %>"   class="fadeIn second" placeholder="Naziv proizvoda">
+    <input class="mb-3" type="text" id="opis" name="opis" value="<%= proizvod.opis %>" class="fadeIn second" placeholder="Opis proizvoda">
+    <input class="mb-3" type="text" id="cena" name="cena" value="<%= proizvod.cena %>"  class="fadeIn second" placeholder="Cena proizvoda">
+    <form action="/proizvod_izmena/<%= proizvod.id %>" method="POST">
+      <input class="mt-3"  type="submit" name="napravi" value="Sacuvaj izmene"> </form>
+    </form>
+    <% }) %>
+  </div>
+
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="/meni">Vrati se nazad</a>
+    </div>
+
+  </div>
+</div>
+
+   
+    
+    
+  </body>
+</html>
